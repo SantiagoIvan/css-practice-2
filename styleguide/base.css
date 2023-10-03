@@ -106,7 +106,3 @@ small, .text_small {font-size: var(--small-text-size);}
 .club {
   font-size: var(--h5-size);
 }
-img {
-  width: 100%;
-  max-width: 50rem;
-}

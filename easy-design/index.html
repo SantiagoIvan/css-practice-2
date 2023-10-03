@@ -61,38 +61,54 @@
         puede ir en un section o en un aside que seria mas especifico. Seria semanticamente mejor -->
         <aside class="reviews">
             <ul class="reviews__list">
-                <li class="reviews__list-item">
-                    <img src="https://assets.codepen.io/296057/fem-purple-arms.jpg" alt="" />
-                    <p>Just WOW</p>
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
-                    <h6>The Staple</h6>
+                <!-- Para que sea semanticamente mas correcto, puedo agregar el markup "figure", que se encarga de relacionar elementos.
+                    generalmente se usa para relacionar una imagen y un epigrafe. Agrega contenido que es independiente pero que sirve de soporte al tema principal.
+                
+                    En este caso estamos relacionando
+                - blockquote: lo que alguien dijo
+                - img: imagen relacionada( 4 estrellas)
+                - cite: el que lo dijo 
+            
+                Otro detalle es que pone solamente alt text en la primera estrella, ya que no tendria sentido poner "start" en todas
+                Da una mejor experiencia de usuario, ya que si hay algun ciego escuchando lo que dice la pagina o no carga la imagen,
+                es mejor escuchar "four star rating" que "start start start start etc"
+            -->
+                <li class="reviews__list-item">                    
+                <img class="list-item__img" src="https://assets.codepen.io/296057/fem-purple-arms.jpg" alt="" />
+                    <figure>
+                        <blockquote>
+                            <p>Just WOW</p>
+                            <img class="star" src="static/fem-star.svg" alt="four star rating">
+                            <img class="star" src="static/fem-star.svg" alt="">
+                            <img class="star" src="static/fem-star.svg" alt="">
+                            <img class="star" src="static/fem-star.svg" alt="">
+                        </blockquote>
+                        <figcaption><cite><h6>The Staple</h6></cite></figcaption>
+                    </figure>
                 </li>
                 <li class="reviews__list-item">
-                    <img src="https://assets.codepen.io/296057/fem-fireworks.jpg" alt="" />
+                    <img class="list-item__img" src="https://assets.codepen.io/296057/fem-fireworks.jpg" alt="" />
                     <p>Best album ever</p>
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
+                    <img class="star" src="static/fem-star.svg" alt="four star rating">
+                    <img class="star" src="static/fem-star.svg" alt="">
+                    <img class="star" src="static/fem-star.svg" alt="">
+                    <img class="star" src="static/fem-star.svg" alt="">
                     <h6>Gold Spin</h6>
                 </li>
                 <li class="reviews__list-item">
-                    <img src="https://assets.codepen.io/296057/fem-blue-arms.jpg" alt="" />
+                    <img class="list-item__img" src="https://assets.codepen.io/296057/fem-blue-arms.jpg" alt="" />
                     <p>I cant stop listening</p>
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
-                    <img src="fem-star.svg" alt="">
+                    <img class="star" src="static/fem-star.svg" alt="four star rating">
+                    <img class="star" src="static/fem-star.svg" alt="">
+                    <img class="star" src="static/fem-star.svg" alt="">
+                    <img class="star" src="static/fem-star.svg" alt="">
                     <h6>Draft media</h6>
                 </li>
             </ul>
         </aside>
         <footer class="footer">
             <p><a href="#">Contact</a></p>
-            <p>2023 MAGENTA LIME</p>
+            <p>&copy; 2023 MAGENTA LIME</p>
         </footer>
     </div>
 </body>

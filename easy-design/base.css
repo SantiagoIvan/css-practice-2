@@ -39,6 +39,7 @@
     font-size: var(--base-size);
     margin: 0;
     padding: 0;
+    text-align: center; /* me alinea el texto y tmb las imagenes un flash */
   }
   
   p {
@@ -124,9 +125,6 @@
   }
 }
 @layer tour{
-  .main {
-    text-align: center;
-  }
   .main ul{
     margin:0;
     padding: 0;
@@ -139,10 +137,10 @@
   }
 }
 @layer reviews{
-  .reviews__list-item{
-    text-align: center;
+  .reviews__list{
+    margin: 0;
+    padding: 0%;
   }
-  
   .list-item__img {
     width: 60%;
     max-width: 500px;

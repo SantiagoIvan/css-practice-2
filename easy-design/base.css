@@ -157,8 +157,7 @@
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* 
+  con el text align en el body ya queda centrado
+  */ 
 }

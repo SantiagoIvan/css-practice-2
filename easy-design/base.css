@@ -150,6 +150,10 @@
     width: 20px;
     height: 20px;
   }
+  blockquote{
+    margin:0;
+    padding: 0%;
+  }
   .reviews__list-item h6 {
     margin-top: .5rem;
     margin-bottom: 3rem;

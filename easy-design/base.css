@@ -165,4 +165,6 @@
   /* 
   con el text align en el body ya queda centrado
   */ 
+  text-transform: uppercase;
+  margin-top: 4rem;
 }

@@ -218,6 +218,55 @@
     width: 80%;
     max-width: 900px;
     margin: 0 auto;
-    border: 2px solid black;
+  }
+}
+
+
+/* 
+  DESKTOP LAYOUT
+
+  A grandes rasgos, tengo 3 elementos:
+  - header
+  - opening img
+  - main
+  - review list
+  - footer
+  En la versión mobile y tablet, se encuentran uno debajo del otro como en el html
+  En la versión desktop, se saca main del medio y se pone en una columna al costado, como chota se hace eso?
+  Con GRID
+  aca también se ve la utilidad del wrapper inicial que envuelve todo.
+  Además de marcar el ancho del banner, tambien puedo meterle un display grid y
+  decirle a cada elemento donde ubicarse
+  
+  https://practical.css.education/img/3e-finish.png
+  */
+@media (min-width: 1100px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0 2rem;
+    max-width: 1300px;
+  }
+  /* Para ayudarme a ver como se acomodaron los elementos del grid */
+  /* .wrapper > * {
+    border: 2px solid white;
+  } */
+  .main{
+    /*
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 5; porque esa columna va hasta abajo de todo
+    grid-column-end: 3; para que llegue hasta la derecha, al fondo
+    */
+    /* SHORTCUT
+    Para calcular esto, tengo que contar las separaciones entre fila / columa */
+    grid-area: 1/2/5/3;
+    padding-top: 8rem; /* probando sale ese numero */
+  }
+  .tour-list{
+    display: block;
+  }
+  .opening-img{
+    margin-bottom: 2rem;
   }
 }

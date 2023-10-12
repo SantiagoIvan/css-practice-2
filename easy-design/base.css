@@ -57,27 +57,27 @@
     line-height: 1.3;
   }
   
-  h1 {
+  h1, .h1 {
     font-size: var(--h1);
   }
   
-  h2 {
+  h2, .h2 {
     font-size: var(--h2);
   }
   
-  h3 {
+  h3, .h3 {
     font-size: var(--h3);
   }
   
-  h4 {
+  h4, .h4 {
     font-size: var(--h4);
   }
   
-  h5 {
+  h5, .h5 {
     font-size: var(--h5);
   }
   
-  h6 {
+  h6, .h6 {
     font-size: var(--h6);
   }
   a {
@@ -104,7 +104,7 @@
 @layer header{
   .header {
     width: 40%;
-    max-width: 250px;
+    max-width: 150px;
     margin: 0 auto;
   }
   .header .header__img{
@@ -121,7 +121,13 @@
   }
   .opening-img img{
     width: 60%;
-    max-width: 500px;
+    max-width: 600px;
+  }
+  @media (min-width: 800px) {
+    .opening-img img {
+      width: 100%;
+      max-width: inherit; /* hereda el del wrapper, que es basicamente mi perimetro para todos los elementos */
+    }
   }
 }
 @layer tour{
@@ -135,9 +141,19 @@
   .tour-list-item__place{
     color: var(--lime);
   }
+
+  @media (min-width: 800px) {
+    .main .tour-list{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 100px;
+      grid-row-gap: 50px;
+      margin-bottom: 10rem;
+    }
+  }
 }
 @layer reviews{
-  .reviews__list{
+  .reviews-list{
     margin: 0;
     padding: 0%;
   }
@@ -146,7 +162,7 @@
     max-width: 500px;
   }
   
-  .reviews__list-item .star{
+  .reviews-list-item .star{
     width: 20px;
     height: 20px;
   }
@@ -154,10 +170,24 @@
     margin:0;
     padding: 0%;
   }
-  .reviews__list-item h6 {
+  .reviews-list-item h6 {
     margin-top: .5rem;
     margin-bottom: 3rem;
     font-style: normal;
+  }
+
+  @media (min-width: 800px) {
+    .reviews-list{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .list-item__img{
+      width: 100%;
+    }
+    .reviews-list-item{
+      margin-right: 2rem;
+    }
   }
 }
 
@@ -167,4 +197,12 @@
   */ 
   text-transform: uppercase;
   margin-top: 4rem;
+}
+
+@media (min-width: 800px) {
+  .wrapper {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
 }

@@ -18,7 +18,7 @@
         <main class="main">
             <!-- El objetivo principal de la pagina es mostrar los tours => main tag
             como es la seccion principal, uso el h1 que es el mas importante -->
-            <h1>Tour</h1>
+            <h1 class="h3">Tour</h1>
             <ul class="tour-list">
                 <li class="tour-list-item">
                     <p class="tour-list-item__date">31 July 2023</p>
@@ -60,7 +60,7 @@
         <!-- Las reviews no son lo principal pero supportean a la idea principal que es la gira asi que 
         puede ir en un section o en un aside que seria mas especifico. Seria semanticamente mejor -->
         <aside class="reviews">
-            <ul class="reviews__list">
+            <ul class="reviews-list">
                 <!-- Para que sea semanticamente mas correcto, puedo agregar el markup "figure", que se encarga de relacionar elementos.
                     generalmente se usa para relacionar una imagen y un epigrafe. Agrega contenido que es independiente pero que sirve de soporte al tema principal.
                 
@@ -73,7 +73,7 @@
                 Da una mejor experiencia de usuario, ya que si hay algun ciego escuchando lo que dice la pagina o no carga la imagen,
                 es mejor escuchar "four star rating" que "start start start start etc"
             -->
-                <li class="reviews__list-item">                    
+                <li class="reviews-list-item">                    
                     <img class="list-item__img" src="https://assets.codepen.io/296057/fem-purple-arms.jpg" alt="" />
                     <figure>
                         <blockquote>
@@ -86,7 +86,7 @@
                         <figcaption><cite><h6>The Staple</h6></cite></figcaption>
                     </figure>
                 </li>
-                <li class="reviews__list-item">
+                <li class="reviews-list-item">
                     <img class="list-item__img" src="https://assets.codepen.io/296057/fem-fireworks.jpg" alt="" />
                     <p>Best album ever</p>
                     <img class="star" src="static/fem-star.svg" alt="four star rating">
@@ -95,7 +95,7 @@
                     <img class="star" src="static/fem-star.svg" alt="">
                     <h6>Gold Spin</h6>
                 </li>
-                <li class="reviews__list-item">
+                <li class="reviews-list-item">
                     <img class="list-item__img" src="https://assets.codepen.io/296057/fem-blue-arms.jpg" alt="" />
                     <p>I cant stop listening</p>
                     <img class="star" src="static/fem-star.svg" alt="four star rating">

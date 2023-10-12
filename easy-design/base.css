@@ -177,16 +177,22 @@
   }
 
   @media (min-width: 800px) {
-    .reviews-list{
+    /* O se puede hacer con un display grid
+    y poner un gap entre columnas */
+    /* .reviews-list{
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
+    }
+    .reviews-list-item:not(:last-child){
+      margin-right: 2rem;
+    } */
+    .reviews-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
     }
     .list-item__img{
       width: 100%;
-    }
-    .reviews-list-item{
-      margin-right: 2rem;
     }
   }
 }
@@ -200,9 +206,18 @@
 }
 
 @media (min-width: 800px) {
+  /*
+  Si quisiera cambiar el fontsize, puedo hacerlo directamente
+  en root, ya que alli tengo todo configurado
+  :root {
+    --base-size:2rem: y todo cambia, o puedo cambia rel scale, o ambos
+    o puedo cambiar el color que se yo
+  }
+  */
   .wrapper {
     width: 80%;
     max-width: 900px;
     margin: 0 auto;
+    border: 2px solid black;
   }
 }
